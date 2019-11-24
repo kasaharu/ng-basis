@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "stylelint": "stylelint './**/*.scss'",
     "prettier": "prettier --write './**/*.{ts,html,scss}'",
     "prettier:check": "prettier --check './**/*.{ts,html,scss}'"
   },
