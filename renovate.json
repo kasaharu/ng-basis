@@ -21,6 +21,9 @@
     },
     {
       "packagePatterns": [
+        "prettier",
+        "stylelint",
+        "stylelint-config-standard"
       ],
       "enabled": true
     },
