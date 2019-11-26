@@ -1,0 +1,35 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "timezone": "Asia/Tokyo",
+  "assignees": ["kasaharu"],
+  "reviewers": ["kasaharu"],
+  "schedule": ["every weekend"],
+  "labels": ["renovate"],
+  "patch": { "automerge": true },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": [
+      "before 3am on the first day of the month"
+    ]
+  },
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "enabled": false
+    },
+    {
+      "packagePatterns": [
+        "prettier",
+        "stylelint",
+        "stylelint-config-standard"
+      ],
+      "enabled": true
+    },
+    {
+      "packagePatterns": ["circleci/node"],
+      "enabled": true
+    }
+  ]
+}
