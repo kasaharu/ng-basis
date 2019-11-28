@@ -6,8 +6,7 @@ executors:
       - image: circleci/node:12.13.0-stretch-browsers
 
 references:
-  npm_cache_key: &npm_cache_key
-    dependency-npm-{{ checksum "yarn.lock" }}
+  npm_cache_key: &npm_cache_key dependency-npm-{{ checksum "yarn.lock" }}
   save_node_modules: &save_node_modules
     save_cache:
       key: *npm_cache_key
