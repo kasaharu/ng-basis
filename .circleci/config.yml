@@ -35,6 +35,14 @@ jobs:
       - *restore_node_modules
       - run: yarn lint
 
+  stylelint:
+    executor: ci-executor
+    steps:
+      - checkout
+      - run: echo "Start stylelint"
+      - *restore_node_modules
+      - run: yarn stylelint
+
   build:
     executor: ci-executor
     steps:
@@ -69,12 +77,18 @@ workflows:
       - lint:
           requires:
             - install-packages
+      - stylelint:
+          requires:
+            - install-packages
       - build:
           requires:
             - lint
+            - stylelint
       - test:
           requires:
             - lint
+            - stylelint
       - e2e:
           requires:
             - lint
+            - stylelint
