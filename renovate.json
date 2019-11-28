@@ -23,7 +23,8 @@
       "packagePatterns": [
         "prettier",
         "stylelint",
-        "stylelint-config-standard"
+        "stylelint-config-standard",
+        "angular-cli-ghpages"
       ],
       "enabled": true
     },
