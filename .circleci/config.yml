@@ -43,6 +43,14 @@ jobs:
       - *restore_node_modules
       - run: yarn stylelint
 
+  format-check:
+    executor: ci-executor
+    steps:
+      - checkout
+      - run: echo "Start check format"
+      - *restore_node_modules
+      - run: yarn prettier:check
+
   build:
     executor: ci-executor
     steps:
@@ -80,15 +88,21 @@ workflows:
       - stylelint:
           requires:
             - install-packages
+      - format-check:
+          requires:
+            - install-packages
       - build:
           requires:
             - lint
             - stylelint
+            - format-check
       - test:
           requires:
             - lint
             - stylelint
+            - format-check
       - e2e:
           requires:
             - lint
             - stylelint
+            - format-check
