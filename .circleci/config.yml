@@ -65,7 +65,7 @@ jobs:
       - checkout
       - run: echo "Start unit test"
       - *restore_node_modules
-      - run: yarn test --watch false
+      - run: yarn test:ci
       - store_artifacts:
           path: coverage
 
@@ -75,7 +75,7 @@ jobs:
       - checkout
       - run: echo "Start e2e test"
       - *restore_node_modules
-      - run: yarn e2e
+      - run: yarn e2e:ci
 
 workflows:
   version: 2
