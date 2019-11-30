@@ -1,27 +1,36 @@
 # NgBasis
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0-rc.3.
+## 使い方
 
-## Development server
+- [テンプレートからリポジトリを作成する](https://help.github.com/ja/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) に書かれている手順で template からリポジトリを作成
+- リポジトリが作成されたら以下の手順で clone から deploy までを実施
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  ```shell
+  $ git clone [the-repositoryname]
+  $ cd [the-repositoryname]
+  $ yarn
+  $ yarn ng deploy --base-href=/[the-repositoryname]/
+  ```
 
-## Code scaffolding
+- デプロイ完了後 `https://[your-username].github.io/[the-repositoryname]` にアクセスするとページが表示される
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 各種バージョン
 
-## Build
+| 言語 / パッケージ名 | バージョン  |
+| :------------------ | :---------- |
+| Node.js             | v12.13.0    |
+| TypeScript          | v3.6.4      |
+| Angular CLI         | v9.0.0-rc.3 |
+| Angular             | v9.0.0-rc.3 |
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Formatter & Linter
 
-## Running unit tests
+- [Prettier](https://prettier.io/)
+- [TSLint](https://palantir.github.io/tslint/)
+- [stylelint](https://stylelint.io/)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## CI & CD
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- [CircleCI](https://circleci.com/)
+- [GitHub Pages](https://help.github.com/ja/github/working-with-github-pages)
+- [Renovate](https://renovate.whitesourcesoftware.com/)
