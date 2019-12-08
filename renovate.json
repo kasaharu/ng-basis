@@ -7,13 +7,13 @@
   "reviewers": ["kasaharu"],
   "schedule": ["every weekend"],
   "labels": ["renovate"],
-  "patch": { "automerge": true },
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": [
       "before 3am on the first day of the month"
     ]
   },
+  "baseBranchList": ["develop"],
   "packageRules": [
     {
       "packagePatterns": ["*"],

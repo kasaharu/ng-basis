@@ -1,0 +1,75 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Get yarn cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-yarn-
+
+      - name: yarn install
+        run: |
+          yarn
+        env:
+          CI: true
+
+      - name: TSLint
+        run: |
+          yarn lint
+        env:
+          CI: true
+
+      - name: stylelint
+        run: |
+          yarn stylelint
+        env:
+          CI: true
+
+      - name: format
+        run: |
+          yarn prettier:check
+        env:
+          CI: true
+
+      - name: build
+        run: |
+          yarn build --prod
+        env:
+          CI: true
+
+      - name: unit test
+        run: |
+          yarn test:ci
+        env:
+          CI: true
+
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage-report
+          path: coverage
+
+      - name: e2e test
+        run: |
+          yarn e2e:ci
+        env:
+          CI: true
