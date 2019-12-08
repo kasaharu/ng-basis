@@ -62,6 +62,12 @@ jobs:
         env:
           CI: true
 
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage-report
+          path: coverage
+
       - name: e2e test
         run: |
           yarn e2e:ci
