@@ -7,7 +7,6 @@
   "reviewers": ["kasaharu"],
   "schedule": ["every weekend"],
   "labels": ["renovate"],
-  "patch": { "automerge": true },
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": [
