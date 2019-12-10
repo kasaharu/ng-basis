@@ -1,5 +1,7 @@
 # NgBasis
 
+![](https://github.com/kasaharu/ng-basis/workflows/Node%20CI/badge.svg)
+
 ## 使い方
 
 - [テンプレートからリポジトリを作成する](https://help.github.com/ja/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) に書かれている手順で template からリポジトリを作成
