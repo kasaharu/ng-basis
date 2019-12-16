@@ -151,6 +151,46 @@
           "options": {}
         }
       }
+    },
+    "stencil": {
+      "projectType": "library",
+      "root": "projects/stencil",
+      "sourceRoot": "projects/stencil/src",
+      "prefix": "stencil",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/stencil/tsconfig.lib.json",
+            "project": "projects/stencil/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/stencil/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/stencil/src/test.ts",
+            "tsConfig": "projects/stencil/tsconfig.spec.json",
+            "karmaConfig": "projects/stencil/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/stencil/tsconfig.lib.json",
+              "projects/stencil/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-basis"
