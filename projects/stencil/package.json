@@ -1,6 +1,13 @@
 {
   "name": "stencil",
   "version": "0.0.1",
+  "scripts": {
+    "build": "../../node_modules/.bin/tsc -p tsconfig.schematics.json",
+    "copy:schemas": "cp --parents schematics/*/schema.json ../../dist/stencil/",
+    "copy:files": "cp --parents -p schematics/*/files/** ../../dist/stencil/",
+    "copy:collection": "cp schematics/collection.json ../../dist/stencil/schematics/collection.json",
+    "postbuild": "yarn copy:schemas && yarn copy:files && yarn copy:collection"
+  },
   "peerDependencies": {
     "@angular/common": "^9.0.0-rc.3",
     "@angular/core": "^9.0.0-rc.3",
