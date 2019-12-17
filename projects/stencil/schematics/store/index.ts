@@ -1,10 +1,9 @@
-import { Rule, Tree, SchematicsException, apply, url, applyTemplates, move, chain, mergeWith } from '@angular-devkit/schematics';
-
-import { strings, normalize, experimental } from '@angular-devkit/core';
-
+import { experimental, normalize, strings } from '@angular-devkit/core';
+import { apply, applyTemplates, chain, mergeWith, move, Rule, SchematicsException, Tree, url } from '@angular-devkit/schematics';
 import { Schema as StencilStoreSchema } from './schema';
 
 export function stencilStore(options: StencilStoreSchema): Rule {
+  // tslint:disable-next-line: cyclomatic-complexity
   return (tree: Tree) => {
     const workspaceConfig = tree.read('/angular.json');
     if (!workspaceConfig) {
