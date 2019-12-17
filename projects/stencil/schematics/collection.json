@@ -9,6 +9,12 @@
       "description": "Generate a service in the project.",
       "factory": "./my-service/index#myService",
       "schema": "./my-service/schema.json"
+    },
+    "store": {
+      "description": "Generate a store in the project.",
+      "factory": "./store/index#stencilStore",
+      "schema": "./store/schema.json"
     }
+
   }
 }
