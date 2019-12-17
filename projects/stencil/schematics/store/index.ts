@@ -31,6 +31,7 @@ export function stencilStore(options: StencilStoreSchema): Rule {
 
     const templateSource = apply(url('./files'), [
       applyTemplates({
+        camelize: strings.camelize,
         classify: strings.classify,
         dasherize: strings.dasherize,
         name: options.name,
