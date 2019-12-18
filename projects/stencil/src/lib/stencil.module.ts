@@ -3,8 +3,7 @@ import { StencilComponent } from './stencil.component';
 
 @NgModule({
   declarations: [StencilComponent],
-  imports: [
-  ],
+  imports: [],
   exports: [StencilComponent],
 })
-export class StencilModule { }
+export class StencilModule {}

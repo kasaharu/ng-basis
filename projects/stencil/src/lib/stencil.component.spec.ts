@@ -8,9 +8,8 @@ describe('StencilComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StencilComponent ],
-    })
-    .compileComponents();
+      declarations: [StencilComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
