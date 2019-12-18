@@ -29,14 +29,22 @@ export function stencilStore(options: StencilStoreSchema): Rule {
       options.path = `${project.sourceRoot}/${projectType}`;
     }
 
+    // NOTE: 渡された name がパス付きになっていた場合パス部分を path として変換し最後の名前を name に残す
+    const splitedName = options.name.split('/');
+    const hasPathInName = splitedName.length >= 2;
+    const lastIndex = splitedName.length - 1;
+
+    const targetName = !hasPathInName ? options.name : splitedName[lastIndex];
+    const targetPath = !hasPathInName ? options.path : `${options.path}/${splitedName.filter((_, index) => index !== lastIndex).join('/')}`;
+
     const templateSource = apply(url('./files'), [
       applyTemplates({
         camelize: strings.camelize,
         classify: strings.classify,
         dasherize: strings.dasherize,
-        name: options.name,
+        name: targetName,
       }),
-      move(normalize(options.path as string)),
+      move(normalize(targetPath as string)),
     ]);
 
     return chain([mergeWith(templateSource)]);
