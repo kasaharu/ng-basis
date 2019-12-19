@@ -10,6 +10,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "e2e:ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
+    "build:stencil": "yarn build stencil && yarn tsc -p './projects/stencil/tsconfig.schematics.json'",
+    "postbuild:stencil": "yarn copy:schemas && yarn copy:files && yarn copy:collection",
+    "copy:schemas": "cd projects/stencil && rsync -R schematics/*/schema.json ../../dist/stencil/",
+    "copy:files": "cd projects/stencil && rsync -R -p schematics/*/files/** ../../dist/stencil/",
+    "copy:collection": "cp -f projects/stencil/schematics/collection.json dist/stencil/schematics/collection.json",
+    "test:stencil": "jasmine './dist/stencil/schematics/**/*.spec.js'",
     "stylelint": "stylelint './**/*.scss'",
     "prettier": "prettier --write './**/*.{ts,html,scss}'",
     "prettier:check": "prettier --check './**/*.{ts,html,scss}'"
