@@ -36,3 +36,13 @@
 - [CircleCI](https://circleci.com/)
 - [GitHub Pages](https://help.github.com/ja/github/working-with-github-pages)
 - [Renovate](https://renovate.whitesourcesoftware.com/)
+
+# Custom Schematics
+
+- projects/stencil に Custom Schematics を配置している
+- 下記のコマンドを実行することで使用できる
+
+```shell
+$ yarn build:stencil
+$ yarn ng g ./dist/stencil:store --name store/features/hello
+```
