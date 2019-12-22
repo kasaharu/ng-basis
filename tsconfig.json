@@ -21,7 +21,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "stencil": [
+        "dist/stencil"
+      ],
+      "stencil/*": [
+        "dist/stencil/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

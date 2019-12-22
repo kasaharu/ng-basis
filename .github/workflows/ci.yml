@@ -50,26 +50,25 @@ jobs:
         env:
           CI: true
 
-      - name: build
+      - name: build ng-basis
         run: |
-          yarn build --prod
+          yarn build --prod ng-basis
         env:
           CI: true
 
-      - name: unit test
+      - name: unit test ng-basis
         run: |
-          yarn test:ci
+          yarn test:ci ng-basis
         env:
           CI: true
 
       - name: Archive code coverage results
         uses: actions/upload-artifact@v1
         with:
-          name: code-coverage-report
-          path: coverage
-
-      - name: e2e test
-        run: |
-          yarn e2e:ci
-        env:
-          CI: true
+          name: code-coverage-report-for-ng-basis
+          path: coverage/ng-basis
+      #       - name: e2e test ng-basis
+      #         run: |
+      #           yarn e2e:ci ng-basis
+      #         env:
+      #           CI: true
