@@ -1,6 +1,6 @@
 {
   "name": "ng-basis",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,6 +10,12 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "e2e:ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
+    "build:stencil": "yarn build stencil && yarn tsc -p './projects/stencil/tsconfig.schematics.json'",
+    "postbuild:stencil": "yarn copy:schemas && yarn copy:files && yarn copy:collection",
+    "copy:schemas": "cd projects/stencil && rsync -R schematics/*/schema.json ../../dist/stencil/",
+    "copy:files": "cd projects/stencil && rsync -R -p schematics/*/files/** ../../dist/stencil/",
+    "copy:collection": "cp -f projects/stencil/schematics/collection.json dist/stencil/schematics/collection.json",
+    "test:stencil": "jasmine './dist/stencil/schematics/**/*.spec.js'",
     "stylelint": "stylelint './**/*.scss'",
     "prettier": "prettier --write './**/*.{ts,html,scss}'",
     "prettier:check": "prettier --check './**/*.{ts,html,scss}'"
@@ -31,6 +37,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.900.0-rc.3",
+    "@angular-devkit/build-ng-packagr": "~0.900.0-rc.3",
     "@angular/cli": "9.0.0-rc.3",
     "@angular/compiler-cli": "9.0.0-rc.3",
     "@angular/language-service": "9.0.0-rc.3",
@@ -45,6 +52,7 @@
     "karma-coverage-istanbul-reporter": "2.1.0",
     "karma-jasmine": "2.0.1",
     "karma-jasmine-html-reporter": "1.4.2",
+    "ng-packagr": "^9.0.0-rc.1",
     "prettier": "1.19.1",
     "protractor": "5.4.2",
     "stylelint": "12.0.0",
