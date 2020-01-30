@@ -12,7 +12,8 @@
     "e2e:ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
     "stylelint": "stylelint './**/*.scss'",
     "prettier": "prettier --write './**/*.{ts,html,scss}'",
-    "prettier:check": "prettier --check './**/*.{ts,html,scss}'"
+    "prettier:check": "prettier --check './**/*.{ts,html,scss}'",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
   },
   "private": true,
   "dependencies": {
