@@ -18,12 +18,12 @@
 
 ## 各種バージョン
 
-| 言語 / パッケージ名 | バージョン  |
-| :------------------ | :---------- |
-| Node.js             | v12.13.0    |
-| TypeScript          | v3.6.4      |
-| Angular CLI         | v9.0.0-rc.3 |
-| Angular             | v9.0.0-rc.3 |
+| 言語 / パッケージ名 | バージョン |
+| :------------------ | :--------- |
+| Node.js             | v12.13.0   |
+| TypeScript          | v3.7.5     |
+| Angular CLI         | v9.0.1     |
+| Angular             | v9.0.0     |
 
 ## Formatter & Linter
 
