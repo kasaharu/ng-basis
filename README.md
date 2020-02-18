@@ -39,10 +39,9 @@
 
 # Custom Schematics
 
-- projects/stencil に Custom Schematics を配置している
+- @kasaharu/ng-schematics パッケージを使って Custom Schematics が使える
 - 下記のコマンドを実行することで使用できる
 
 ```shell
-$ yarn build:stencil
-$ yarn ng g ./dist/stencil:store --name store/features/hello
+$ yarn ng-schematics ngrx-store --name features/store/hello
 ```
