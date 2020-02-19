@@ -22,8 +22,8 @@
 | :------------------ | :--------- |
 | Node.js             | v12.13.0   |
 | TypeScript          | v3.7.5     |
-| Angular CLI         | v9.0.1     |
-| Angular             | v9.0.0     |
+| Angular CLI         | v9.0.2     |
+| Angular             | v9.0.1     |
 
 ## Formatter & Linter
 
