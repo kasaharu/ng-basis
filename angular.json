@@ -65,7 +65,12 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": { "scripts": true, "styles": false, "hidden": true, "vendor": true },
+              "sourceMap": {
+                "scripts": true,
+                "styles": false,
+                "hidden": true,
+                "vendor": true
+              },
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
@@ -153,5 +158,8 @@
       }
     }
   },
-  "defaultProject": "ng-basis"
+  "defaultProject": "ng-basis",
+  "cli": {
+    "analytics": false
+  }
 }
