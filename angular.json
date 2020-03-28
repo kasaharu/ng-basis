@@ -9,6 +9,7 @@
     "@schematics/angular:component": {
       "style": "scss",
       "changeDetection": "OnPush",
+      "displayBlock": true,
       "lintFix": true
     },
     "@schematics/angular:directive": {
