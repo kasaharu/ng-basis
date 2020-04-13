@@ -1,6 +1,6 @@
 {
   "name": "ng-basis",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -35,7 +35,7 @@
     "@angular/cli": "~9.1.0",
     "@angular/compiler-cli": "~9.1.0",
     "@angular/language-service": "~9.1.0",
-    "@kasaharu/ng-schematics": "^0.3.1",
+    "@kasaharu/ng-schematics": "^0.3.2",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -47,9 +47,9 @@
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "~1.4.2",
-    "prettier": "1.19.1",
+    "prettier": "2.0.4",
     "protractor": "~5.4.3",
-    "stylelint": "13.2.1",
+    "stylelint": "13.3.2",
     "stylelint-config-standard": "20.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
