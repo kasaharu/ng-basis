@@ -18,12 +18,7 @@
 
 ## 各種バージョン
 
-| 言語 / パッケージ名 | バージョン |
-| :------------------ | :--------- |
-| Node.js             | v12.13.0   |
-| TypeScript          | v3.7.5     |
-| Angular CLI         | v9.1.0     |
-| Angular             | v9.1.0     |
+- [package.json](./package.json) 参照
 
 ## Formatter & Linter
 
