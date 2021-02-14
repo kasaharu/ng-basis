@@ -35,7 +35,7 @@
     "@angular/cli": "~11.2.0",
     "@angular/compiler-cli": "~11.2.0",
     "@angular/language-service": "~11.2.0",
-    "@kasaharu/ng-schematics": "^0.4.2",
+    "@kasaharu/ng-schematics": "^0.4.3",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
