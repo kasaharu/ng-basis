@@ -1,6 +1,8 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    "github>lacolaco/renovate-config:ng-update",
+    "github>lacolaco/renovate-config:automerge-types"
   ],
   "timezone": "Asia/Tokyo",
   "assignees": ["kasaharu"],
@@ -14,23 +16,5 @@
     ]
   },
   "baseBranches": ["develop"],
-  "packageRules": [
-    {
-      "packagePatterns": ["*"],
-      "enabled": false
-    },
-    {
-      "packagePatterns": [
-        "prettier",
-        "stylelint",
-        "stylelint-config-standard",
-        "angular-cli-ghpages"
-      ],
-      "enabled": true
-    },
-    {
-      "packagePatterns": ["circleci/node"],
-      "enabled": true
-    }
-  ]
+  "packageRules": []
 }
