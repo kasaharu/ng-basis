@@ -93,19 +93,24 @@
                   "maximumError": "4kb"
                 }
               ]
-            }
-          }
+            },
+            "development": {}
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-basis:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "ng-basis:build:production"
+            },
+            "development": {
+              "browserTarget": "ng-basis:build:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
@@ -147,14 +152,17 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ng-basis:serve"
+            "protractorConfig": "e2e/protractor.conf.js"
           },
           "configurations": {
             "production": {
               "devServerTarget": "ng-basis:serve:production"
+            },
+            "development": {
+              "devServerTarget": "ng-basis:serve:development"
             }
-          }
+          },
+          "defaultConfiguration": "development"
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
