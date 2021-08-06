@@ -83,7 +83,7 @@
         "no-unused-expressions": "error",
         "no-use-before-define": "off",
         "prefer-template": "error",
-        "quotes": "error",
+        "quotes": ["error", "single"],
         "semi": "error"
       }
     },
