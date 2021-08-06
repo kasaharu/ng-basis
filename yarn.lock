@@ -18,7 +18,7 @@
     "@angular-devkit/core" "12.2.0"
     rxjs "6.6.7"
 
-"@angular-devkit/build-angular@~12.2.0":
+"@angular-devkit/build-angular@12.2.0":
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-12.2.0.tgz#6b775147c61b58fdaa5d4531d859bfeb14cc1a14"
   integrity sha512-hcnlTZo1iWVVDiq2MSwbEJtc2E4rf7tSvsBvSVQLH1GILtVvN64L3YW0wVThNctWL8nicHWjtGQ+z3kjCOhxYw==
@@ -138,7 +138,7 @@
   dependencies:
     tslib "^2.2.0"
 
-"@angular/cli@~12.2.0":
+"@angular/cli@12.2.0":
   version "12.2.0"
   resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-12.2.0.tgz#61465222588fc71f77c02895f0d61774a0ae031d"
   integrity sha512-gxw4e3Wb1YgNE+f9sX90xea5vXatqvlYq3mOWFUWVKYcayAgnt9z97a1ULEkSytS1aVjyL44zzkU/QFufPpadQ==
