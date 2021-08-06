@@ -67,7 +67,7 @@
         "dot-notation": "off",
         "id-blacklist": "error",
         "import/order": "error",
-        "indent": "error",
+        "indent": ["error", 2],
         "linebreak-style": [
           "error",
           "unix"
