@@ -4,25 +4,19 @@
   "newProjectRoot": "projects",
   "schematics": {
     "@schematics/angular:class": {
-      "lintFix": true
     },
     "@schematics/angular:component": {
       "style": "scss",
       "changeDetection": "OnPush",
-      "displayBlock": true,
-      "lintFix": true
+      "displayBlock": true
     },
     "@schematics/angular:directive": {
-      "lintFix": true
     },
     "@schematics/angular:module": {
-      "lintFix": true
     },
     "@schematics/angular:pipe": {
-      "lintFix": true
     },
     "@schematics/angular:service": {
-      "lintFix": true
     }
   },
   "projects": {
