@@ -3,21 +3,16 @@
   "version": 1,
   "newProjectRoot": "projects",
   "schematics": {
-    "@schematics/angular:class": {
-    },
+    "@schematics/angular:class": {},
     "@schematics/angular:component": {
       "style": "scss",
       "changeDetection": "OnPush",
       "displayBlock": true
     },
-    "@schematics/angular:directive": {
-    },
-    "@schematics/angular:module": {
-    },
-    "@schematics/angular:pipe": {
-    },
-    "@schematics/angular:service": {
-    }
+    "@schematics/angular:directive": {},
+    "@schematics/angular:module": {},
+    "@schematics/angular:pipe": {},
+    "@schematics/angular:service": {}
   },
   "projects": {
     "ng-basis": {
@@ -160,9 +155,10 @@
       }
     }
   },
-  "defaultProject": "ng-basis",
   "cli": {
     "analytics": false,
-    "defaultCollection": "@angular-eslint/schematics"
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
