@@ -1,6 +1,6 @@
 {
   "name": "ng-basis",
-  "version": "12.2.1",
+  "version": "14.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
