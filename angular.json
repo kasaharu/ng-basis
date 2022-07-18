@@ -3,27 +3,16 @@
   "version": 1,
   "newProjectRoot": "projects",
   "schematics": {
-    "@schematics/angular:class": {
-      "lintFix": true
-    },
+    "@schematics/angular:class": {},
     "@schematics/angular:component": {
       "style": "scss",
       "changeDetection": "OnPush",
-      "displayBlock": true,
-      "lintFix": true
+      "displayBlock": true
     },
-    "@schematics/angular:directive": {
-      "lintFix": true
-    },
-    "@schematics/angular:module": {
-      "lintFix": true
-    },
-    "@schematics/angular:pipe": {
-      "lintFix": true
-    },
-    "@schematics/angular:service": {
-      "lintFix": true
-    }
+    "@schematics/angular:directive": {},
+    "@schematics/angular:module": {},
+    "@schematics/angular:pipe": {},
+    "@schematics/angular:service": {}
   },
   "projects": {
     "ng-basis": {
@@ -53,13 +42,7 @@
               "src/assets/styles/reset.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "vendorChunk": true,
-            "extractLicenses": false,
-            "buildOptimizer": false,
-            "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -69,18 +52,12 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "optimization": true,
-              "outputHashing": "all",
               "sourceMap": {
                 "scripts": true,
                 "styles": false,
                 "hidden": true,
                 "vendor": true
               },
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -92,16 +69,23 @@
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ]
+              ],
+              "outputHashing": "all"
             },
-            "development": {}
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-          },
+          "options": {},
           "configurations": {
             "production": {
               "browserTarget": "ng-basis:build:production"
@@ -137,42 +121,21 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ng-basis:serve:production"
-            },
-            "development": {
-              "devServerTarget": "ng-basis:serve:development"
-            }
-          },
-          "defaultConfiguration": "development"
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {}
         }
       }
     }
   },
-  "defaultProject": "ng-basis",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
