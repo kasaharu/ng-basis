@@ -67,8 +67,3 @@ jobs:
         with:
           name: code-coverage-report-for-ng-basis
           path: coverage/ng-basis
-      #       - name: e2e test ng-basis
-      #         run: |
-      #           yarn e2e:ci ng-basis
-      #         env:
-      #           CI: true
