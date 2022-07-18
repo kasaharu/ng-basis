@@ -52,7 +52,7 @@ jobs:
 
       - name: build ng-basis
         run: |
-          yarn build --prod ng-basis
+          yarn build ng-basis
         env:
           CI: true
 
