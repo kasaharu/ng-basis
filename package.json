@@ -54,7 +54,7 @@
     "karma-coverage": "2.0.3",
     "karma-jasmine": "4.0.1",
     "karma-jasmine-html-reporter": "1.7.0",
-    "prettier": "2.4.0",
+    "prettier": "2.8.8",
     "protractor": "7.0.0",
     "stylelint": "13.13.1",
     "stylelint-config-standard": "22.0.0",
