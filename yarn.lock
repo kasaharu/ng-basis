@@ -2734,10 +2734,10 @@ ajv@^8.8.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-angular-cli-ghpages@1.0.0-rc.2:
-  version "1.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/angular-cli-ghpages/-/angular-cli-ghpages-1.0.0-rc.2.tgz#46a0f4d8e54673155c8d4e3c799acb81e7f3b2b9"
-  integrity sha512-oAAnu6hcNYZ5Scp1WrPUnwOHkz6JoPfwPd3b4BYifBHWlwRnB2/zXzqZRYn0vwi2aO9LqMVDbq/7dJlpAWz2LQ==
+angular-cli-ghpages@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/angular-cli-ghpages/-/angular-cli-ghpages-1.0.6.tgz#ca8ca04afc01166c69b97aeb5af7272777aaca66"
+  integrity sha512-CMX7Z9fTzW1MSO2ypJDKmxfenb5m56SzCSeGDdD4faiOU5tV6PoUaMhramIHK3WAJZBOb69kNBh8/ALWq/0ilA==
   dependencies:
     commander "^3.0.0-0"
     fs-extra "^9.0.1"
